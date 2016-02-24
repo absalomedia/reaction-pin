@@ -1,0 +1,58 @@
+<template name="pinSettings">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title"></div>
+      Don't have a Pin Payment API key? <a href="https://pin.net.au/docs/api" target="_blank">Get it here.</a> (Need to sign in)
+    </div>
+    <div class="panel-body">
+      {{#autoForm collection="ReactionCore.Collections.Packages" schema="ReactionCore.Schemas.PinPackageConfig" doc=packageData type="update" id="pin-update-form"}}
+        {{>afQuickField name='settings.key'}}
+        {{>afQuickField name='settings.production'}}
+        <button type="submit" class="btn btn-primary pull-right">Update</button>
+      {{/autoForm}}
+    </div>
+  </div>
+
+</template>
+
+
+<template name="pin">
+  <div class="container-fluid-sm flex">
+    <div class="flex-item">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="panel-title">Pin Checkout</div>
+        </div>
+        <div class="list-group">
+          <div class="list-group-item">
+            {{#if packageData.settings.key}}
+              <span>Pin API key: <button type="button" class="btn btn-link" data-event-action="showPinSettings">**********</button></span>
+            {{else}}
+              <span>Pin API key: <button type="button" class="btn btn-link" data-event-action="showPinSettings">Configure Now</button></span>
+            {{/if}}
+          </div>
+        </div>
+        <div class="panel-footer">
+          <div class="left"></div>
+          <div class="right">
+            
+            <div class="panel-footer-item">
+              {{#if packageData.settings.key}}
+                <i class="fa fa-check-circle fa-2x text-success"></i>
+              {{else}}
+                <i class="fa fa-minus-circle fa-2x text-muted"></i>
+              {{/if}}
+            </div>
+
+            <div class="panel-footer-item">
+              <button class="btn btn-default" data-event-action="showPinSettings">
+                <i class="fa fa-gear"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "pinjs": {
+      "version": "1.0.1",
+      "dependencies": {
+        "superagent": {
+          "version": "1.7.2"
+        }
+      }
+    }
+  }
+}
