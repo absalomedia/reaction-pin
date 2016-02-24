@@ -3,7 +3,7 @@ reaction-pin
 
 Meteor package adds Pin Payments for Reaction Commerce.
 
-This is a prototype module -> pull requests are celebrated, feedback encouraged.
+This is an alpha development module -> pull requests are celebrated, feedback encouraged.
 
 **Usage**
 ```bash
