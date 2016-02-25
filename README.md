@@ -7,7 +7,7 @@ This is an alpha development module -> pull requests are celebrated, feedback en
 
 **Usage**
 ```bash
-meteor add reactioncommerce:reaction-pin
+meteor add absalomedia:reaction-pin
 ```
 *Note: this package automatically converts the total charge amount into smallest currency units as is required by Pin before the API call is made.*
 
